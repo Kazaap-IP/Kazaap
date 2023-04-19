@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 029569d310b8e4b4eb62f556ef1f8e38
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - Card1: {instanceID: 0}
+  - Card2: {instanceID: 0}
+  - Player1Area: {instanceID: 0}
+  - Player2Area: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
