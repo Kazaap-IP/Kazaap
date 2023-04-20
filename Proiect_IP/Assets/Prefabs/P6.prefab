@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: -6152788818422716900}
   - component: {fileID: 6483327157747905169}
   m_Layer: 8
-  m_Name: Card1
+  m_Name: P6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -70,7 +70,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 7ee9ec48dd1b26f4fb60ccd4a6b237e1, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 227d18afe1b5d03448c01283f444e836, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -92,9 +92,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a68cb04bf633ab548b22616b08cfecfe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Card1: {fileID: 8949488871984352}
+  Card: {fileID: 8949488871984352}
   Player1Hand: {fileID: 7455377318067420689, guid: 064da2c25a1673e40bcf08779fb6786b, type: 3}
   Player2Hand: {fileID: 6248204168601445025, guid: 9dbf10a745cf59749ad0e680cef716e4, type: 3}
+  p1: {fileID: 8949488871984352, guid: a079b278e4a697244a4314b8cd7e46f6, type: 3}
+  p2: {fileID: 8949488871984352, guid: 6a33f456babe3064f8d8688c3557fcb9, type: 3}
+  p3: {fileID: 8949488871984352, guid: 8c6602aac0d329e43b2ff97be21e3e3d, type: 3}
+  p4: {fileID: 8949488871984352, guid: aaaa1bd0b663eff4886b50bcd6a9d340, type: 3}
+  p5: {fileID: 8949488871984352, guid: f492680604301fc4c9a1373d319635d5, type: 3}
+  p6: {fileID: 8949488871984352}
+  m1: {fileID: 8949488871984352, guid: e9bea73310c855c419f27b499a323f98, type: 3}
+  m2: {fileID: 8949488871984352, guid: 96cb62c72c2d64e46b9b2ed7d3f02360, type: 3}
+  m3: {fileID: 8949488871984352, guid: a888c0c003869984eb41aeb6d56058bc, type: 3}
+  m4: {fileID: 8949488871984352, guid: 7334e455e97581143a41ade117724bab, type: 3}
+  m5: {fileID: 8949488871984352, guid: 3c6847ef8ae057044b8287928616dc74, type: 3}
+  m6: {fileID: 8949488871984352, guid: 49cc8d83609d09949b89e5425ecfb973, type: 3}
   isInDropZone: 0
   Canvas: {fileID: 2870098466303190379, guid: e6cfded6331f48449bba97affef0cb04, type: 3}
 --- !u!114 &-5889704816627130521
