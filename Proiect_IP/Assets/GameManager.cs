@@ -9,6 +9,9 @@ public class GameManager : MonoBehaviour
     public static int score1 = 0;
     public static int score2 = 0;
     public static int turn = 0;
+    public static int both = 0;
+    public static int end1 = 0;
+    public static int end2 = 0;
 
     public GameObject gameOver;
 

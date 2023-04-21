@@ -101,47 +101,78 @@ public class DragAndDrop : MonoBehaviour
         isDragging = false;
         if (isInDropZone)
         {
-            if(GameManager.turn == 0)
+            if (GameManager.both == 0)
             {
-                transform.SetParent(Player1Hand.transform, false);
-                            //UpdateScore(5);\
-                            //switch (card) 
-                            //    case(DrawCards.p1.Equals(card))
-                if (Card.Equals(p1))
-                      GameManager.score1 += 1;
-                if (Card.Equals(p2))
-                      GameManager.score1 += 2;
-                if (Card.Equals(p3))
-                      GameManager.score1 += 3;
-                if(Card.Equals(p4))
-                      GameManager.score1 += 4;
-                if (Card.Equals(p5))
-                      GameManager.score1 += 5;
-                if (Card.Equals(p6))
-                      GameManager.score1 += 6;
-                if (Card.Equals(m1))
-                      GameManager.score1 -= 1;
-                if (Card.Equals(m2))
-                      GameManager.score1 -= 2;
-                if (Card.Equals(m3))
-                      GameManager.score1 -= 3;
-                if (Card.Equals(m4))
-                      GameManager.score1 -= 4;
-                if (Card.Equals(m5))
-                      GameManager.score1 -= 5;
-                if (Card.Equals(m6))
-                      GameManager.score1 -= 6;
-                if (GameManager.score1 > 20)
-                    Debug.Log("Player 2 has won!");
-             
-                GameManager.turn = 1;
+                if (GameManager.turn == 0)
+                {
+                    transform.SetParent(Player1Hand.transform, false);
+                    if (Card.Equals(p1))
+                        GameManager.score1 += 1;
+                    if (Card.Equals(p2))
+                        GameManager.score1 += 2;
+                    if (Card.Equals(p3))
+                        GameManager.score1 += 3;
+                    if (Card.Equals(p4))
+                        GameManager.score1 += 4;
+                    if (Card.Equals(p5))
+                        GameManager.score1 += 5;
+                    if (Card.Equals(p6))
+                        GameManager.score1 += 6;
+                    if (Card.Equals(m1))
+                        GameManager.score1 -= 1;
+                    if (Card.Equals(m2))
+                        GameManager.score1 -= 2;
+                    if (Card.Equals(m3))
+                        GameManager.score1 -= 3;
+                    if (Card.Equals(m4))
+                        GameManager.score1 -= 4;
+                    if (Card.Equals(m5))
+                        GameManager.score1 -= 5;
+                    if (Card.Equals(m6))
+                        GameManager.score1 -= 6;
+                    if (GameManager.score1 > 20)
+                        Debug.Log("Player 2 has won!");
+
+                    GameManager.turn = 1;
+                }
+                else
+                {
+                    transform.SetParent(Player2Hand.transform, false);
+                    if (Card.Equals(p1))
+                        GameManager.score2 += 1;
+                    if (Card.Equals(p2))
+                        GameManager.score2 += 2;
+                    if (Card.Equals(p3))
+                        GameManager.score2 += 3;
+                    if (Card.Equals(p4))
+                        GameManager.score2 += 4;
+                    if (Card.Equals(p5))
+                        GameManager.score2 += 5;
+                    if (Card.Equals(p6))
+                        GameManager.score2 += 6;
+                    if (Card.Equals(m1))
+                        GameManager.score2 -= 1;
+                    if (Card.Equals(m2))
+                        GameManager.score2 -= 2;
+                    if (Card.Equals(m3))
+                        GameManager.score2 -= 3;
+                    if (Card.Equals(m4))
+                        GameManager.score2 -= 4;
+                    if (Card.Equals(m5))
+                        GameManager.score2 -= 5;
+                    if (Card.Equals(m6))
+                        GameManager.score2 -= 6;
+
+                    if (GameManager.score2 > 20)
+                        Debug.Log("Player 1 has won!");
+                    GameManager.turn = 0;
+                }
+
+
             }
-            else
+            else if (GameManager.both == 1)
             {
                 transform.SetParent(Player2Hand.transform, false);
-                //UpdateScore(5);\
-                //switch (card) 
-                //    case(DrawCards.p1.Equals(card))
                 if (Card.Equals(p1))
                     GameManager.score2 += 1;
                 if (Card.Equals(p2))
@@ -166,17 +197,41 @@ public class DragAndDrop : MonoBehaviour
                     GameManager.score2 -= 5;
                 if (Card.Equals(m6))
                     GameManager.score2 -= 6;
-               
+
                 if (GameManager.score2 > 20)
                     Debug.Log("Player 1 has won!");
-                GameManager.turn = 0;
             }
-            
-
-        }
-        //if (isInDropZone2) {
-        //   transform.SetParent(Player2Hand.transform, false);
-        //}
+            else if (GameManager.both == 2)
+            {
+                transform.SetParent(Player1Hand.transform, false);
+                if (Card.Equals(p1))
+                    GameManager.score1 += 1;
+                if (Card.Equals(p2))
+                    GameManager.score1 += 2;
+                if (Card.Equals(p3))
+                    GameManager.score1 += 3;
+                if (Card.Equals(p4))
+                    GameManager.score1 += 4;
+                if (Card.Equals(p5))
+                    GameManager.score1 += 5;
+                if (Card.Equals(p6))
+                    GameManager.score1 += 6;
+                if (Card.Equals(m1))
+                    GameManager.score1 -= 1;
+                if (Card.Equals(m2))
+                    GameManager.score1 -= 2;
+                if (Card.Equals(m3))
+                    GameManager.score1 -= 3;
+                if (Card.Equals(m4))
+                    GameManager.score1 -= 4;
+                if (Card.Equals(m5))
+                    GameManager.score1 -= 5;
+                if (Card.Equals(m6))
+                    GameManager.score1 -= 6;
+                if (GameManager.score1 > 20)
+                    Debug.Log("Player 2 has won!");
+            }
+        } 
         else
         {
             transform.position = startPosition;

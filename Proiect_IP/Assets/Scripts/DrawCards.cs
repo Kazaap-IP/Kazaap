@@ -57,7 +57,114 @@ public class DrawCards : MonoBehaviour
         }
         else
         {
-            if (GameManager.turn == 0)
+            if (GameManager.both == 0)
+            {
+                if (GameManager.turn == 0)
+                {
+                    if (cardnr0 < 9)
+                    {
+                        GameObject card = personalcards[Random.Range(0, personalcards.Count)];
+                        GameObject playerCard1 = Instantiate(card, new Vector3(0, 0, 0), Quaternion.identity);
+                        if (card.Equals(reg1))
+                            GameManager.score1 += 1;
+                        if (card.Equals(reg2))
+                            GameManager.score1 += 2;
+                        if (card.Equals(reg3))
+                            GameManager.score1 += 3;
+                        if (card.Equals(reg4))
+                            GameManager.score1 += 4;
+                        if (card.Equals(reg5))
+                            GameManager.score1 += 5;
+                        if (card.Equals(reg6))
+                            GameManager.score1 += 6;
+                        if (card.Equals(reg7))
+                            GameManager.score1 += 7;
+                        if (card.Equals(reg8))
+                            GameManager.score1 += 8;
+                        if (card.Equals(reg9))
+                            GameManager.score1 += 9;
+                        if (card.Equals(reg10))
+                            GameManager.score1 += 10;
+                        if (GameManager.score1 > 20)
+                            Debug.Log("Player 2 has won!");
+
+                        playerCard1.transform.SetParent(Player1Area.transform, false);
+                        GameManager.turn = 1;
+                        cardnr0++;
+                    }
+                }
+                else
+                {
+                    if (cardnr1 < 9)
+                    {
+
+                        GameObject card = personalcards[Random.Range(0, personalcards.Count)];
+                        GameObject playerCard2 = Instantiate(card, new Vector3(0, 0, 0), Quaternion.identity);
+                        if (card.Equals(reg1))
+                            GameManager.score2 += 1;
+                        if (card.Equals(reg2))
+                            GameManager.score2 += 2;
+                        if (card.Equals(reg3))
+                            GameManager.score2 += 3;
+                        if (card.Equals(reg4))
+                            GameManager.score2 += 4;
+                        if (card.Equals(reg5))
+                            GameManager.score2 += 5;
+                        if (card.Equals(reg6))
+                            GameManager.score2 += 6;
+                        if (card.Equals(reg7))
+                            GameManager.score2 += 7;
+                        if (card.Equals(reg8))
+                            GameManager.score2 += 8;
+                        if (card.Equals(reg9))
+                            GameManager.score2 += 9;
+                        if (card.Equals(reg10))
+                            GameManager.score2 += 10;
+
+                        if (GameManager.score2 > 20)
+                            Debug.Log("Player 1 has won!");
+                        playerCard2.transform.SetParent(Player2Area.transform, false);
+                        GameManager.turn = 0;
+                        cardnr1++;
+                    }
+                }
+            } else if (GameManager.both == 1)
+            {
+                    if (cardnr1 < 9)
+                    {
+
+                        GameObject card = personalcards[Random.Range(0, personalcards.Count)];
+                        GameObject playerCard2 = Instantiate(card, new Vector3(0, 0, 0), Quaternion.identity);
+                        if (card.Equals(reg1))
+                            GameManager.score2 += 1;
+                        if (card.Equals(reg2))
+                            GameManager.score2 += 2;
+                        if (card.Equals(reg3))
+                            GameManager.score2 += 3;
+                        if (card.Equals(reg4))
+                            GameManager.score2 += 4;
+                        if (card.Equals(reg5))
+                            GameManager.score2 += 5;
+                        if (card.Equals(reg6))
+                            GameManager.score2 += 6;
+                        if (card.Equals(reg7))
+                            GameManager.score2 += 7;
+                        if (card.Equals(reg8))
+                            GameManager.score2 += 8;
+                        if (card.Equals(reg9))
+                            GameManager.score2 += 9;
+                        if (card.Equals(reg10))
+                            GameManager.score2 += 10;
+
+                        if (GameManager.score2 > 20)
+                            Debug.Log("Player 1 has won!");
+                        playerCard2.transform.SetParent(Player2Area.transform, false);
+                        GameManager.turn = 0;
+                        cardnr1++;
+                    }
+          
+            }
+            else if (GameManager.both == 2)
             {
                 if (cardnr0 < 9)
                 {
@@ -85,45 +192,24 @@ public class DrawCards : MonoBehaviour
                         GameManager.score1 += 10;
                     if (GameManager.score1 > 20)
                         Debug.Log("Player 2 has won!");
-                   
+
                     playerCard1.transform.SetParent(Player1Area.transform, false);
                     GameManager.turn = 1;
                     cardnr0++;
                 }
-            }
-            else
-            {
-                if (cardnr1 < 9)
-                {
 
-                    GameObject card = personalcards[Random.Range(0, personalcards.Count)];
-                    GameObject playerCard2 = Instantiate(card, new Vector3(0, 0, 0), Quaternion.identity);
-                    if (card.Equals(reg1))
-                        GameManager.score2 += 1;
-                    if (card.Equals(reg2))
-                        GameManager.score2 += 2;
-                    if (card.Equals(reg3))
-                        GameManager.score2 += 3;
-                    if (card.Equals(reg4))
-                        GameManager.score2 += 4;
-                    if (card.Equals(reg5))
-                        GameManager.score2 += 5;
-                    if (card.Equals(reg6))
-                        GameManager.score2 += 6;
-                    if (card.Equals(reg7))
-                        GameManager.score2 += 7;
-                    if (card.Equals(reg8))
-                        GameManager.score2 += 8;
-                    if (card.Equals(reg9))
-                        GameManager.score2 += 9;
-                    if (card.Equals(reg10))
-                        GameManager.score2 += 10;
-                    
-                    if (GameManager.score2 > 20)
-                        Debug.Log("Player 1 has won!");
-                    playerCard2.transform.SetParent(Player2Area.transform, false);
-                    GameManager.turn = 0;
-                    cardnr1++;
+            }
+            else if(GameManager.both == 3)
+            {
+                if(GameManager.score1 > GameManager.score2) {
+                    Debug.Log("Player 1 has won!");
+                }
+                else if (GameManager.score1 < GameManager.score2) {
+                    Debug.Log("Player 2 has won!");
+                }
+                else if(GameManager.score1 == GameManager.score2)
+                {
+                    Debug.Log("Draw!");
                 }
             }
         }
